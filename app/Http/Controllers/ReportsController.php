@@ -45,7 +45,6 @@ class ReportsController extends Controller
         'datetime' => $validated['datetime'] ?? now()
     ]);
 
-    // Response sukses
     return response()->json([
         'success' => true,
         'message' => 'Laporan berhasil dibuat',
@@ -116,7 +115,6 @@ class ReportsController extends Controller
             ], 404);
         }
 
-        // Hapus Reports
         $reports->delete();
 
         return response()->json([
