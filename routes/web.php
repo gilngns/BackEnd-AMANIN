@@ -14,9 +14,9 @@ use Maatwebsite\Excel\Facades\Excel;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/laporan/export', function () {
     return Excel::download(new LaporanExport, 'laporan_all.xlsx');
